@@ -1,0 +1,76 @@
+/**
+* @theme ml
+* @size a4 8.5in 11in
+* @size half-a4 5.5in 8.5in
+* @size sixth-a4 3.3333in 4.25in
+* @size 4:3 10in 7.5in
+* @size 16:9 10in 5.63in
+* @size 16:10 10in 6.25in
+*/
+
+/* Load a built-in theme to extend */
+@import "uncover";
+
+/* Load UW fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,900;1,400;1,900&family=Red+Hat+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Overall font size and alignment */
+:root {
+  font-size: 14pt;
+  letter-spacing: 0;
+  text-align: left;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Keep images from getting too big */
+section img {
+  max-width: 80%;
+  max-height: 600px;
+}
+
+/* Color for the triangle behind the page numbers */
+section:after {
+  --color-background-paginate: #BF5A62;
+  --color-foreground: white;
+  --color-background: transparent;
+}
+
+section:not([data-class=title]) h1 {
+  background: -webkit-linear-gradient(0deg, #F5A9B8, #5BCEFA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -2px -2px 0 black;
+  text-align: left;
+}
+
+section[data-class=title] h1,
+section[data-class=title] h2,
+section[data-class=title] h3 {
+  color: white;
+  background: none;
+  text-shadow: 2px 2px 0 black;
+  text-align: left;
+}
+
+section[data-class=title] p {
+  color: white;
+  background: none;
+  text-shadow: 1px 1px 0 black;
+  font-size: 10pt;
+}
+
+/* Fix horizontal rules */
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid black;
+}

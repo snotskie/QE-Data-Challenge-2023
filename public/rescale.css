@@ -1,0 +1,8 @@
+svg[data-marpit-svg]{
+    max-height: 100vh;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  html {scroll-behavior: smooth}
+  body {background: black}
